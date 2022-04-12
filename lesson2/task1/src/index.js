@@ -32,6 +32,5 @@ const store = createStore(countreReducer);
 store.dispatch(incrementActionCreator());
 store.dispatch(decrementActionCreator());
 
-console.log(store.getState());
  
 
