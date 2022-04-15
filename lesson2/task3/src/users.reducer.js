@@ -14,7 +14,6 @@ export const userReducer = (state = initState, action) => {
       return {
         ...state,
       usersList: usersList.filter(el=>el.id!==action.payload)
-        // history: state.history.concat(-1),
       };
 
     default:
