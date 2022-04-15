@@ -1,5 +1,5 @@
 import store from './store';
-import { addUser, deleteUser } from './users.action';
+import { addUser, deleteUser } from './users.actions';
 
 console.log(store.getState());
 
