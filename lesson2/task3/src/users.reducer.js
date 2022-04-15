@@ -7,13 +7,15 @@ export const userReducer = (state = initState, action) => {
     case ADDUSER:
       return {
         ...state,
-        usersList: [action.payload],
+        usersList: [...state.usersList, action.payload],
       };
 
     case DELETEUSER:
       return {
         ...state,
-      usersList: usersList.filter(el=>el.id!==action.payload)
+        usersList: [...state.usersList.filter(el=>el.id!==action.payload)],
+
+        // usersList: usersList.filter(el=>el.id!==action.payload)
       };
 
     default:
