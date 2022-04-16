@@ -1,7 +1,5 @@
 import { ADD_USER, DELETE_USER, UPDATE_USER } from './users.actions';
-
 const initState = { usersList: [] };
-
 export const userReducer = (state = initState, action) => {
   switch (action.type) {
     case ADD_USER: {
@@ -19,7 +17,6 @@ export const userReducer = (state = initState, action) => {
         usersList: newList,
       };
     }  
-  
     case UPDATE_USER: {
       const newList = state.usersList.map((user) => {
         if (user.id === action.payload.userId) {
