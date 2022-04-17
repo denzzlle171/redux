@@ -8,12 +8,10 @@ export const addProduct = (product) => {
   };
 };
 
-export const deleteUser = (Id) => {
+export const removeProduct = (Id) => {
   return {
     type: REMOVE_PRODUCT,
     payload: Id,
   };
 };
 
-
-// addProduct({ id: 76, name: 'milk' });

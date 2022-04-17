@@ -1,28 +1,27 @@
 import { ADD_PRODUCT, REMOVE_PRODUCT } from './cart.actions';
 
 const initState = {
-  cart: {
     products: []
-  }};
+  };
 export const cartReducer = (state = initState, action) => {
 
   switch (action.type) {
     case ADD_PRODUCT: {
-      console.log(state.cart.products);
+     
       return {
         ...state.cart,
-        products: [...state.cart.products, action.payload],
+        products: [...state.products, action.payload],
       };
     }
-// state.cart.products.concat(action.payload),
+// 
     case REMOVE_PRODUCT: {
-      // const newList = state.usersList.filter(
-      //   (user) => user.id !== action.payload
-      // );
-      // return {
-      //   ...state,
-      //   usersList: newList,
-      // };
+      const newList = state.products.filter(
+        (user) => user.id !== action.payload
+      );
+      return {
+        ...state.cart,
+        products: newList,
+      };
     }
 
     default:
@@ -31,3 +30,5 @@ export const cartReducer = (state = initState, action) => {
 };
 
 export default cartReducer;
+//...state,
+      //  usersList: [...state.usersList.filter(el=>el.id!==action.payload)],
