@@ -1,4 +1,4 @@
-import { SET_USER, REMOVE_USER,} from './users.actions';
+import { SET_USER, REMOVE_USER,} from './user.actions';
 
 const initState =  { user: null };
 

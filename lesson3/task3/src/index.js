@@ -1,6 +1,6 @@
 import store from './store';
 import { addProduct, removeProduct } from './cart.actions';
-import { setUser, removeUser } from './users.actions';
+import { setUser, removeUser } from './user.actions';
 import { setLanguage } from './lenguage.actions';
 
 store.subscribe(() => console.log(store.getState()));
