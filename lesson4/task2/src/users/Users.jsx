@@ -4,7 +4,7 @@ import * as userActions from './users.actions'
 
 
 
-class User extends Component {
+class Users extends Component {
 
     onUserCreate = () => {
         const id = Math.round(Math.random() * 1000000);
@@ -56,6 +56,6 @@ const mapDispatch = {
 
 const connectore = connect(mapState, mapDispatch)
 
-const ConnectedUsers = connectore(User);
+const ConnectedUsers = connectore(Users);
 export default ConnectedUsers;
 
