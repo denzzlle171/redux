@@ -5,8 +5,7 @@ import Pagination from './Pagination';
 import * as navigator from '../page.actions';
 
 const UsersList = ({ usersState, toNextPage, toPrevPage }) => {
-  console.log(toNextPage);
-
+ 
   const users = usersState.usersList;
   const currentPage = usersState.currentPage;
 
