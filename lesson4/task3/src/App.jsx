@@ -1,14 +1,20 @@
 import React from 'react';
-// import {Provider} from 'react-redux';
+import {Provider} from 'react-redux';
 import UsersList from './users/UsersList';
-// import store from './store'
+import store from './store'
 
 
 
-const App = ({ users }) => {
+const App = () => {
 
-  return <UsersList users={users} />;
+
+console.log(store.getState());
+
+  return (
+   <Provider store={store}>
+     <UsersList  />
+   </Provider>
+)
 };
  
 export default App
-

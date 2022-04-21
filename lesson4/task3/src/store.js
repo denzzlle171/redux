@@ -1,15 +1,14 @@
-// import { createStore, combineReducers } from 'redux';
-// import countreReducer from './counter/counter.reducer';
-// import usersReducer from './users/users.reducer';
+import { createStore, combineReducers } from 'redux';
+import pageReducer from './page.reducer';
+import userReducer from './user.reducer';
 
 
-// const reducer = combineReducers({
-//   users: usersReducer,
-//   countreReducer: countreReducer,
-// });
+const reducer = combineReducers({
+  currentPage: pageReducer,
+  usersList: userReducer,
+});
 
-// const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__
-//   && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(reducer);
 
-// export default store;
+export default store;
 

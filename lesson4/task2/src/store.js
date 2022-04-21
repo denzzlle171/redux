@@ -8,8 +8,8 @@ const reducer = combineReducers({
   countreReducer: countreReducer,
 });
 
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__
-  && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(reducer);
 
 export default store;
 
+//  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
