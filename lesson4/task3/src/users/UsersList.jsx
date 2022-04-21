@@ -12,9 +12,6 @@ const UsersList = ({ usersState, toNextPage, toPrevPage }) => {
   const itemsPerPage = 3;
 const totalItems = users.length;
 
-  let lastPage = Math.ceil(totalItems / itemsPerPage); //
-
-
   let startPg = (currentPage - 1) * itemsPerPage; //firs veiw notes
   let endPg = startPg + itemsPerPage; // last veiw notes
 
@@ -29,7 +26,7 @@ const totalItems = users.length;
         goNext={toNextPage}
         goPrev={toPrevPage}
         currentPage={currentPage}
-        lastPage={lastPage}
+        itemsPerPage={itemsPerPage}
         totalItems={totalItems}
       />
       <ul className="users">
