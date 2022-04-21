@@ -1,4 +1,4 @@
-// import { NEXTPAGE, PREVPAGE } from './page.actions';
+
 const users = [
   {
     id: 'id-0',
@@ -55,15 +55,12 @@ const users = [
     age: 45,
     name: 'Anna',
   },
+  
 ];
 
 
 const userReducer = (state = users, action) => {
   switch (action.type) {
-    // case NEXTPAGE:
-    //   return state + 1;
-    // case PREVPAGE:
-    //   return state - 1;
     default:
       return state;
   }
