@@ -10,7 +10,10 @@ const UsersList = ({ usersState, toNextPage, toPrevPage }) => {
   const currentPage = usersState.currentPage;
 
   const itemsPerPage = 3;
-  let lastPage = Math.ceil(users.length / itemsPerPage); //
+const totalItems = users.length;
+
+  let lastPage = Math.ceil(totalItems / itemsPerPage); //
+
 
   let startPg = (currentPage - 1) * itemsPerPage; //firs veiw notes
   let endPg = startPg + itemsPerPage; // last veiw notes
@@ -27,6 +30,7 @@ const UsersList = ({ usersState, toNextPage, toPrevPage }) => {
         goPrev={toPrevPage}
         currentPage={currentPage}
         lastPage={lastPage}
+        totalItems={totalItems}
       />
       <ul className="users">
         {viewNotes().map((user) => (
