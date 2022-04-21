@@ -1,4 +1,3 @@
-
 const users = [
   {
     id: 'id-0',
@@ -55,7 +54,6 @@ const users = [
     age: 45,
     name: 'Anna',
   },
-  
 ];
 
 
