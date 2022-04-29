@@ -12,14 +12,14 @@ export const getData = (dataCityes) => {
 
 
 export const getWeatherData = () => {
-  return function (dispatch) {
-    getWeather().then((cityData) => {
-      dispatch(getData(cityData));
-    });
+  return async function (dispatch) {
+  const response = await getWeather();
+   dispatch(getData(response));
   };
 };
 
-
-
-
-//getWeatherData;
+  // return function (dispatch) {
+  //   getWeather().then((cityData) => {
+  //     dispatch(getData(cityData));
+  //   });
+  // };
