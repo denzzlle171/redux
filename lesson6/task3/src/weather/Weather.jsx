@@ -5,17 +5,17 @@ import CityesItem from './CityesItem';
 import {CityesSelector} from './weather.selectors';
 
 
-const Weather = ({ getCityData, cityes, fetchWeather }) => {
+const Weather = ({cityes, fetchWeather }) => {
   useEffect(() => {
     fetchWeather();
   }, []);
 
   console.log(cityes); 
 
-  // if ((cityes = {})) {
-  //   return null;
-  // }
-  
+  if ((cityes = {})) {
+    return null;
+  }
+
   return (
     <main className="weather">
       <h1 className="weather__title">Weather data</h1>
