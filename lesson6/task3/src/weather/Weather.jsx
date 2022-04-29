@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
-import {  fetchWeatherData } from './weather.actions';
+import { getWeatherData } from './weather.actions';
 import { connect } from 'react-redux'
 import CityesItem from './CityesItem';
 import {CityesSelector} from './weather.selectors';
 
 
-const Weather = ({cityes, fetchWeather }) => {
+const Weather = ({ cityes, WeatherData }) => {
   useEffect(() => {
-    fetchWeather();
+    WeatherData();
   }, []);
 
-  console.log(cityes); 
+  console.log(cityes);//!!!
 
   if ((cityes = {})) {
     return null;
@@ -29,8 +29,7 @@ const Weather = ({cityes, fetchWeather }) => {
 };
 
 const mapDispatch = {
-
-  fetchWeather: fetchWeatherData,
+ WeatherData: getWeatherData,
 };
 
 const mapState = state => {

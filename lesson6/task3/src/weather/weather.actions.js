@@ -3,7 +3,7 @@ import { getWeather } from './weather.gateway';
 
 
 
-export const getWeatherData = (dataCityes) => {
+export const getData = (dataCityes) => {
   return {
     type: GET_WETHER_DATA,
     payload: dataCityes
@@ -11,14 +11,15 @@ export const getWeatherData = (dataCityes) => {
 };
 
 
-export const fetchWeatherData = () => {
-  return function(dispatch) {
+export const getWeatherData = () => {
+  return function (dispatch) {
     getWeather().then((cityData) => {
-      dispatch(getWeatherData(cityData));
-    })
-  }
+      dispatch(getData(cityData));
+    });
+  };
 };
 
 
 
 
+//getWeatherData;
