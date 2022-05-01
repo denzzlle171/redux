@@ -12,7 +12,9 @@ const Weather = ({ cityes, WeatherData }) => {
 
   console.log(cityes);//!!!
 
-  if ((cityes = {})) {
+
+
+  if (cityes === undefined) {
     return null;
   }
 
